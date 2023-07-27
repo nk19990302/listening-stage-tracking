@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./history.css";
 import { recordApis } from "../../services/records";
-import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import HistoryItem from "../../components/HistoryItem";
+import withAuth from "../../components/withAuth/withAuth";
 
-const History = () => {
-    const navigate = useNavigate();
+const History = ({ userId }) => {
     const [data, setData] = useState([]);
-    const [userId] = useState(localStorage.getItem("userId"));
 
     useEffect(() => {
-        if (userId == null) navigate("/login");
         (async () => {
             await fetchItem();
         })();
@@ -57,4 +54,4 @@ const History = () => {
     );
 };
 
-export default History;
+export default withAuth(History);

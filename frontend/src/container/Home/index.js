@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./home.css";
 import Button from "../../components/Button";
 import Header from "../../components/Header";
+import withAuth from "../../components/withAuth/withAuth";
 
 const navItemsHome = [
     {
@@ -13,14 +14,11 @@ const navItemsHome = [
     },
 ];
 
-const Home = () => {
+const Home = ({ userId }) => {
     const navigate = useNavigate();
     const [selected, setSelected] = useState("");
     const [dataSaved, setDataSaved] = useState(false);
-    const [userId, setUserId] = useState(localStorage.getItem("userId"));
-
     useEffect(() => {
-        if (userId == null) navigate("/login");
         (async () => {
             const res = await recordApis.getByDateAndUserId(userId, getDate());
             if (res.status === "success" && res.data) {
@@ -96,4 +94,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default withAuth(Home);
