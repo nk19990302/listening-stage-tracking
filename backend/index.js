@@ -6,7 +6,7 @@ const mainRouter = require("./src/routes");
 
 const app = express();
 
-const mongoUrl = "mongodb://0.0.0.0:27017/colabx";
+const mongoUrl = process.env.MONGO_URL || "mongodb://0.0.0.0:27017/colabx";
 const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
