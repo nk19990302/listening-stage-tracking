@@ -1,0 +1,28 @@
+.btn {
+  background-color: rgb(5, 107, 196);
+  width: 200px;
+  padding: 11px 16px !important;
+  border-radius: 40px;
+  outline: 0;
+  border: 0;
+  display: inline-block;
+  font-size: 14px;
+  color: white;
+}
+
+.btn:disabled {
+  background-color: rgb(186, 186, 186);
+  color: white;
+  width: 200px;
+  padding: 11px 16px !important;
+  border-radius: 40px;
+  outline: 0;
+  border: 0;
+  margin-top: 16px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: rgb(8, 63, 182);
+}

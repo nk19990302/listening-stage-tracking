@@ -1,0 +1,14 @@
+.histories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+
+.heading {
+  color: rgb(65, 65, 65);
+  font-size: 16px;
+}

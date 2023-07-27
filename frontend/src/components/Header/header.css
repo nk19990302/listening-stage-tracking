@@ -1,0 +1,27 @@
+.header-wrapper {
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 8px 24px;
+  box-sizing: border-box;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.item {
+  font-weight: 600;
+}
+
